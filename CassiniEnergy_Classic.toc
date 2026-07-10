@@ -1,0 +1,17 @@
+## Interface: 11508
+## Title: CassiniEnergy
+## Notes: Track energy regeneration ticks (every 2 seconds) for Rogues and Druids.
+## Version: 1.0.0
+## DefaultState: enabled
+## Author: CassiniEU @ Twitch.com
+## SavedVariablesPerCharacter: CassiniEnergy_Options
+
+CassiniEnergy.lua
+
+Modules\SlashCommands.lua
+Modules\OptionsPanel.lua
+
+Modules\TickBar.lua
+
+Dependencies\UIFactory.lua
+Dependencies\AddonUtils.lua

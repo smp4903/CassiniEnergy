@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="panelGlow" cx="50%" cy="50%" r="62%">
+      <stop offset="0%" stop-color="#4a3608"/>
+      <stop offset="45%" stop-color="#241a08"/>
+      <stop offset="100%" stop-color="#0c0a06"/>
+    </radialGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8f9098"/>
+      <stop offset="18%" stop-color="#6b6c74"/>
+      <stop offset="55%" stop-color="#494a52"/>
+      <stop offset="100%" stop-color="#2c2d33"/>
+    </linearGradient>
+    <linearGradient id="stoneBevel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9cad2"/>
+      <stop offset="100%" stop-color="#3a3b42"/>
+    </linearGradient>
+    <linearGradient id="charge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff9d6"/>
+      <stop offset="35%" stop-color="#ffe23a"/>
+      <stop offset="70%" stop-color="#ffb606"/>
+      <stop offset="100%" stop-color="#a86400"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fffef2" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#ffe23a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffb606" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <rect x="6" y="6" width="244" height="244" rx="46" fill="#101015"/>
+  <rect x="8" y="8" width="240" height="240" rx="44" fill="url(#stone)" stroke="#17181c" stroke-width="3"/>
+  <rect x="14" y="14" width="228" height="228" rx="39" fill="none" stroke="url(#stoneBevel)" stroke-width="3"/>
+
+  <rect x="30" y="30" width="196" height="196" rx="30" fill="#111015" stroke="#0a0a0c" stroke-width="2"/>
+  <rect x="33" y="33" width="190" height="190" rx="27" fill="url(#panelGlow)"/>
+
+  <g fill="#3f4048" stroke="#1c1d21" stroke-width="1.5">
+    <circle cx="47" cy="47" r="7"/>
+    <circle cx="209" cy="47" r="7"/>
+    <circle cx="47" cy="209" r="7"/>
+    <circle cx="209" cy="209" r="7"/>
+  </g>
+  <g fill="#aeb0b8">
+    <circle cx="45" cy="45" r="2.4"/>
+    <circle cx="207" cy="45" r="2.4"/>
+    <circle cx="45" cy="207" r="2.4"/>
+    <circle cx="207" cy="207" r="2.4"/>
+  </g>
+
+  <ellipse cx="128" cy="128" rx="92" ry="72" fill="url(#coreGlow)" opacity="0.55" filter="url(#softGlow)"/>
+
+  <g transform="rotate(-35 128 128)">
+    <rect x="52" y="103" width="152" height="50" rx="24" fill="#1a1206" stroke="#000000" stroke-width="2"/>
+    <rect x="57" y="108" width="142" height="40" rx="20" fill="url(#charge)" filter="url(#glow)"/>
+    <rect x="66" y="114" width="124" height="12" rx="6" fill="#fffdf0" opacity="0.75"/>
+  </g>
+
+  <g filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="150,66 122,120 142,124 108,190" fill="none" stroke="#fff8c8" stroke-width="9" opacity="0.9"/>
+    <polyline points="150,66 122,120 142,124 108,190" fill="none" stroke="#ffffff" stroke-width="3.4"/>
+  </g>
+
+  <g filter="url(#glow)" stroke="#fff2a0" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.9">
+    <polyline points="128,128 168,150 176,140 200,150"/>
+    <polyline points="128,128 96,110 90,120 62,110"/>
+    <polyline points="128,128 150,168 160,166 172,186"/>
+    <polyline points="128,128 104,92 96,96 84,78"/>
+  </g>
+
+  <g stroke="#c88400" stroke-width="4" stroke-linecap="round" opacity="0.9" transform="rotate(-35 128 128)">
+    <line x1="70" y1="132" x2="82" y2="132"/>
+    <line x1="76" y1="126" x2="76" y2="138"/>
+    <line x1="92" y1="126" x2="100" y2="138"/>
+    <line x1="100" y1="126" x2="92" y2="138"/>
+    <line x1="112" y1="126" x2="112" y2="138"/>
+    <line x1="112" y1="132" x2="120" y2="126"/>
+  </g>
+</svg>
