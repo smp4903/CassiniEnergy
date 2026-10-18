@@ -30,3 +30,12 @@ the 2-second clock to the server's actual cadence.
 
 - Energy tick tracking works identically across Classic Era, TBC, and WOTLK clients.
 - Saved settings are stored per character in `CassiniEnergy_Options`.
+
+### Development
+
+`tests/run.sh` loads the addon against a stubbed WoW API and checks the tick detection (energy changes against the combat log's energize events), the full-energy and energy-pool checks, and the Player frame placement. It needs `lua5.1`. Pass a folder to test a release build instead: `tests/run.sh dist/CassiniEnergy-v1-0-0/CassiniEnergy`.
+
+### Release
+
+`python3 tools/build_release.py` writes `dist/CassiniEnergy-v<version>.zip`, with the version from the TOC and dots as dashes (`1.0.0` becomes `1-0-0`), plus the same files unzipped in `dist/CassiniEnergy-v<version>/`. The zip holds a single `CassiniEnergy/` folder with the TOCs and the files they list; `Media/`, `tests/`, `tools/` and this README stay out.
+
